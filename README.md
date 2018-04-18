@@ -5,7 +5,11 @@
 <a herf="https://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame">Phython</a>
 <a herf="https://www.youtube.com/watch?v=_GikMdhAhv0">Phython</a>
 
-<img scr="
+<img scr="https://github.com/klew3509/TimeFracture/blob/master/gamescreenshot.png">
+<img scr="https://github.com/klew3509/TimeFracture/blob/master/gamescreenshot1.png">
+<img scr="https://github.com/klew3509/TimeFracture/blob/master/gamescreenshot2.png">
+<img scr="https://github.com/klew3509/TimeFracture/blob/master/gamescreenshot3.png">
+<img scr="https://github.com/klew3509/TimeFracture/blob/master/gamescreenshot4.png">
 <p>
   Game Story:
   A man named William Jackson has the powers to shift through time. He got his power during an accident with an experiment that was held by William’s friends who wanted to help change the past for the better future, but as they demonstrate the idea of time travel to William, there is a malfunction in the system that caused a fracture in time. The reason why William wanted to change the future is because a company named “Micron” took control of the world in the present time. When “Micron” found out that William went in the time machine, they try to find him through time to stop him from changing their fate. William’s mission is to hunt down the headquarters of “Micron” and eliminate the enemies to get the man who started and controls the company. Once “Micron” is defeated, the future and present will be free from “Micron”.

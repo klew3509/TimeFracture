@@ -14,7 +14,7 @@
 </p>
 
 <h2>Screenshots</h2>
-<img scr="https://github.com/klew3509/TimeFracture/blob/master/Time%20Fracture%20Pic.png">
+<img scr="https://github.com/klew3509/TimeFracture/blob/master/gamescreenshot.png">
 <img scr="https://github.com/klew3509/TimeFracture/blob/master/gamescreenshot1.png">
 <img scr="https://github.com/klew3509/TimeFracture/blob/master/gamescreenshot2.png">
 <img scr="https://github.com/klew3509/TimeFracture/blob/master/gamescreenshot3.png">

@@ -1,3 +1,4 @@
+By Clear Visions Studio:
 # TimeFracture
 
 <p>
@@ -17,6 +18,7 @@
 <img src="https://github.com/TimothyNg5808/TimeFracture/blob/master/gamescreenshot5.png">
 <img src="https://github.com/TimothyNg5808/TimeFracture/blob/master/gamescreenshot4.png">
 <img src="https://github.com/TimothyNg5808/TimeFracture/blob/master/gamescreenshot6.png">
+<img src="https://github.com/TimothyNg5808/TimeFracture/blob/master/gamescreenshot7.png">
 
 <h2>Requirements</h2>
 

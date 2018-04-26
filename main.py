@@ -41,8 +41,7 @@ tip8=Image("tip8.png",game)
 floorspikes=Image("floorspikes.png",game,use_alpha=False)
 floorspikes1=Image("floorspikes.png",game,use_alpha=False)
 floorspikes2=Image("floorspikes.png",game,use_alpha=False)
-gameover=Image("download.jpg",game,use_alpha=False)
-#gameover2=Image("gameover.jpg",game)
+gameover=Image("gameover.jpg",game)
 end=Image("end.png",game)
 moveon=Image("Continue-To-Next-Level.png",game)
 enemy=Animation("enemywalk.png",2,game,159/2,79,36,use_alpha=False)
@@ -188,7 +187,6 @@ victoryscreen1.resizeBy(-50)
 victoryscreen1.y+=45
 victoryquit.resizeBy(-45)
 victoryquit.y+=150
-gameover.resizeTo(1480,820)
 
 #Health Packs
 healthpacks=[]
@@ -323,7 +321,7 @@ for index in range(10):
     powerpacks5[index].moveTo(x,-1680)
     powerpacks5[index].setSpeed(z,180)
     powerpacks5[index].resizeBy(-80)
-    
+
 #Sounds
 gun=Sound("Gun.wav",1)
 death=Sound("death.wav",2)
@@ -1611,7 +1609,7 @@ while not game.over:
     enemy1.visible=False
     enemy2.visible=False
     appear.visible=False
-    
+
     if forcefield.visible:
         forcefield.move()
         forcefield.moveTo(wjwalk.x,wjwalk.y)
@@ -2107,6 +2105,9 @@ while not game.over:
         game.update(151)
         game.wait(K_RETURN)
         game.quit()
+
+    if bosshealth<1:
+        game.over=True
         
     game.update(151)
 game.over=False

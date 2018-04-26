@@ -64,6 +64,8 @@ timeblast=Animation("timeblast.png",10,game,640/10,64)
 appear=Animation("magic_002.png",15,game,960/5,576/3,4,use_alpha=False)
 boss=Image("boss.png",game)
 bossweapon=Animation("timeblast.png",10,game,640/10,64)
+bossweapon1=Animation("timeblast.png",10,game,640/10,64)
+bossweapon2=Animation("timeblast.png",10,game,640/10,64)
 victoryscreen=Image("victoryscreen.png",game)
 victoryscreen1=Image("victoryscreen1.png",game)
 victoryquit=Image("quit.png",game)
@@ -178,6 +180,10 @@ timeblast.visible=False
 timeblast.resizeBy(-35)
 bossweapon.visible=False
 bossweapon.resizeBy(-35)
+bossweapon1.visible=False
+bossweapon1.resizeBy(-35)
+bossweapon2.visible=False
+bossweapon2.resizeBy(-35)
 appear.resizeBy(-30)
 boss.resizeBy(-30)
 boss.x+=300
@@ -498,12 +504,12 @@ while not game.over:
         healthpacks[index].move()
 
         if healthpacks[index].collidedWith(wjwalk,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks[index].visible=False
 
         if healthpacks[index].collidedWith(wjjump,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks[index].visible=False
 
@@ -514,12 +520,12 @@ while not game.over:
         healthpacks1[index].move()
 
         if healthpacks1[index].collidedWith(wjwalk,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks1[index].visible=False
 
         if healthpacks1[index].collidedWith(wjjump,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks1[index].visible=False
 
@@ -530,12 +536,12 @@ while not game.over:
         healthpacks2[index].move()
 
         if healthpacks2[index].collidedWith(wjwalk,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks2[index].visible=False
 
         if healthpacks2[index].collidedWith(wjjump,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks2[index].visible=False
 
@@ -792,7 +798,7 @@ while not game.over:
         forcefield.move()
         forcefield.moveTo(wjwalk.x,wjwalk.y)
         forcefieldtime-=1
-    
+        
     enemy.move()
     x=randint(1,3)
     enemy.setSpeed(x,90)
@@ -954,7 +960,7 @@ while not game.over:
 
     if keys.Pressed[K_LCTRL]:
         forcefield.visible=not forcefield.visible
-        powerlevel-=10
+        powerlevel-=20
 
     if forcefieldtime<0:
         forcefield.visible=False
@@ -1018,10 +1024,10 @@ while not game.over:
             forcefield.visible=False
 
     if powerlevel<-1:
-        powerlevel+=1
+        powerlevel+=10
 
     if powerlevel<1:
-        powerlevel+=1
+        powerlevel+=10
              
     if keys.Pressed[K_ESCAPE]:
         unpause.draw()
@@ -1162,12 +1168,12 @@ while not game.over:
         healthpacks3[index].move()
 
         if healthpacks3[index].collidedWith(wjwalk,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks3[index].visible=False
 
         if healthpacks3[index].collidedWith(wjjump,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks3[index].visible=False
 
@@ -1178,12 +1184,12 @@ while not game.over:
         healthpacks4[index].move()
 
         if healthpacks4[index].collidedWith(wjwalk,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks4[index].visible=False
 
         if healthpacks4[index].collidedWith(wjjump,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks4[index].visible=False
 
@@ -1194,12 +1200,12 @@ while not game.over:
         healthpacks5[index].move()
 
         if healthpacks5[index].collidedWith(wjwalk,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks5[index].visible=False
 
         if healthpacks5[index].collidedWith(wjjump,"rectangle"):
-            wjwalk.health+=10
+            wjwalk.health+=20
             pickup.play()
             healthpacks5[index].visible=False
 
@@ -1418,7 +1424,6 @@ while not game.over:
 
     if forcefieldtime<0:
         forcefield.visible=False
-        powerlevel-=10
 
     if bullet1.collidedWith(forcefield,"circle") or bullet2.collidedWith(forcefield,"circle") or bullet3.collidedWith(forcefield,"circle"):
         bullet1.visible=False
@@ -1477,6 +1482,12 @@ while not game.over:
 
         if keys.Pressed[K_LCTRL]:
             forcefield.visible=False
+
+    if powerlevel<-1:
+        powerlevel+=10
+
+    if powerlevel<1:
+        powerlevel-=10
     
     if keys.Pressed[K_ESCAPE]:
         unpause.draw()
@@ -1579,6 +1590,8 @@ bosshide=1000
 bosshide1=1000
 bosshide2=1450
 bossfire=250
+bossfire1=280
+bossfire2=300
 
 enemy.moveTo(1690,715)
 enemy1.moveTo(1750,715)
@@ -1605,6 +1618,8 @@ while not game.over:
     boss.move()
     appear.move()
     bossweapon.move()
+    bossweapon1.move()
+    bossweapon2.move()
     enemy.visible=False
     enemy1.visible=False
     enemy2.visible=False
@@ -1619,7 +1634,7 @@ while not game.over:
         wjwalk.health-=1000
 
     if bossfire>249 and not bossfire<1:
-        bossweapon.moveTo(boss.x,boss.y)
+         bossweapon.moveTo(boss.x,boss.y)
     
     if bossfire<251:
         bossfire-=1
@@ -1739,6 +1754,38 @@ while not game.over:
         boss.visible=False
         bosshide1-=1
 
+        if bossfire1>279 and not bossfire1<1:
+            bossweapon1.moveTo(boss.x,boss.y)
+    
+        if bossfire1<281:
+            bossfire1-=1
+
+        if bossfire1<1:
+            bossfire1+=280
+            bossweapon1.visible=True
+            bossangleTo=bossweapon1.angleTo(wjwalk)
+            bossweapon1.setSpeed(7.3,bossangleTo)
+
+        if wjwalk.collidedWith(bossweapon1,"circle"):
+            wjwalk.health-=20
+            bossweapon1.visible=False
+
+        if bossfire2>299 and not bossfire2<1:
+            bossweapon1.moveTo(boss.x,boss.y)
+    
+        if bossfire2<301:
+            bossfire2-=1
+
+        if bossfire2<1:
+            bossfire2+=300
+            bossweapon2.visible=True
+            bossangleTo=bossweapon2.angleTo(wjwalk)
+            bossweapon2.setSpeed(7.3,bossangleTo)
+
+        if wjwalk.collidedWith(bossweapon2,"circle"):
+            wjwalk.health-=20
+            bossweapon2.visible=False
+
     if bosshide1<1:
         appear.visible=False
         boss.visible=True
@@ -1832,7 +1879,7 @@ while not game.over:
             bullet3.moveTo(enemy2.x,enemy2.y)
             bullet3.visible=False
 
-    if bosshealth<350:
+    if bosshealth<250:
         enemy.visible=True
         enemy1.visible=True
         enemy2.visible=True
@@ -1926,7 +1973,7 @@ while not game.over:
         boss.visible=False
         bosshide1-=1
 
-    if bosshide1<1:
+    if bosshide2<1:
         appear.visible=False
         boss.visible=True
 
@@ -2011,10 +2058,10 @@ while not game.over:
 
     if keys.Pressed[K_LCTRL]:
         forcefield.visible=not forcefield.visible
+        powerlevel-=30
 
     if forcefieldtime<0:
         forcefield.visible=False
-        powerlevel-=10
 
     if bullet1.collidedWith(forcefield,"circle") or bullet2.collidedWith(forcefield,"circle") or bullet3.collidedWith(forcefield,"circle") or bossweapon.collidedWith(forcefield,"circle"):
         bullet1.visible=False
@@ -2078,6 +2125,12 @@ while not game.over:
 
         if keys.Pressed[K_LCTRL]:
             forcefield.visible=False
+
+    if powerlevel<-1:
+        powerlevel+=10
+
+    if powerlevel<1:
+        powerlevel-=10
     
     if keys.Pressed[K_ESCAPE]:
         unpause.draw()
@@ -2105,9 +2158,6 @@ while not game.over:
         game.update(151)
         game.wait(K_RETURN)
         game.quit()
-
-    if bosshealth<1:
-        game.over=True
         
     game.update(151)
 game.over=False
